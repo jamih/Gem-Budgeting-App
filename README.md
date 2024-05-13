@@ -29,7 +29,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="[https://github.com/jamih/Gem_Budgeting_App](https://github.com/jamih/Gem_Budgeting_App)">
+  <a href="[https://github.com/jamih/Gem_Budgeting_App](https://github.com/jamih/Gem-Budgeting-App)">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -38,14 +38,14 @@
   <p align="center">
     Expense manager to help budget your life!
     <br />
-    <a href="https://github.com/jamih/Gem_Budgeting_App"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/jamih/Gem-Budgeting-App"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/jamih/Gem_Budgeting_App">View Demo</a>
+    <a href="https://github.com/jamih/Gem-Budgeting-App">View Demo</a>
     ·
-    <a href="https://github.com/jamih/Gem_Budgeting_App/issues">Report Bug</a>
+    <a href="https://github.com/jamih/Gem-Budgeting-App/issues">Report Bug</a>
     ·
-    <a href="https://github.com/jamih/Gem_Budgeting_App/issues">Request Feature</a>
+    <a href="https://github.com/jamih/Gem-Budgeting-App/issues">Request Feature</a>
   </p>
 </div>
 
@@ -232,16 +232,16 @@ Project Link: [https://github.com/jamih/Gem_Budgeting_App](https://github.com/ja
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/jamih/Gem_Budgeting_App.svg?style=for-the-badge
-[contributors-url]: https://github.com/jamih/Gem_Budgeting_App/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/jamih/Gem_Budgeting_App.svg?style=for-the-badge
-[forks-url]: https://github.com/jamih/Gem_Budgeting_App/network/members
-[stars-shield]: https://img.shields.io/github/stars/jamih/Gem_Budgeting_App.svg?style=for-the-badge
-[stars-url]: https://github.com/jamih/Gem_Budgeting_App/stargazers
-[issues-shield]: https://img.shields.io/github/issues/jamih/Gem_Budgeting_App.svg?style=for-the-badge
-[issues-url]: https://github.com/jamih/Gem_Budgeting_App/issues
-[license-shield]: https://img.shields.io/github/license/jamih/Gem_Budgeting_App.svg?style=for-the-badge
-[license-url]: https://github.com/jamih/Gem_Budgeting_App/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/jamih/Gem-Budgeting-App.svg?style=for-the-badge
+[contributors-url]: https://github.com/jamih/Gem-Budgeting-App/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jamih/Gem-Budgeting-App.svg?style=for-the-badge
+[forks-url]: https://github.com/jamih/Gem-Budgeting-App/network/members
+[stars-shield]: https://img.shields.io/github/stars/jamih/Gem-Budgeting-App.svg?style=for-the-badge
+[stars-url]: https://github.com/jamih/Gem-Budgeting-App/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jamih/Gem-Budgeting-App.svg?style=for-the-badge
+[issues-url]: https://github.com/jamih/Gem-Budgeting-App/issues
+[license-shield]: https://img.shields.io/github/license/jamih/Gem-Budgeting-App.svg?style=for-the-badge
+[license-url]: https://github.com/jamih/Gem-Budgeting-App/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
