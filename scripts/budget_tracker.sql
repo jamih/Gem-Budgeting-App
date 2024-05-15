@@ -24,6 +24,7 @@ VALUES
 CREATE TABLE `expense_item` (
   `id` int NOT NULL AUTO_INCREMENT,
   `user_id` int NOT NULL,
+  `name` varchar(45) DEFAULT NULL,
   `date` DATE NOT NULL,
   `amount` float NOT NULL,
   `category` varchar(45) NOT NULL,
@@ -31,7 +32,8 @@ CREATE TABLE `expense_item` (
   FOREIGN KEY (`user_id`) REFERENCES `users`(`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-INSERT INTO `expense_item`(user_id, date, amount, category)
+INSERT INTO `expense_item`(user_id, name, date, amount, category)
 VALUES
-(1, '2024-04-03', 34.54, 'GAS'),
-(1, '2024-04-03', 26.45, 'FOOD');
+(1, 'QuikTrip', '2024-04-03', 34.54, 'GAS'),
+(1, 'Whataburger', '2024-04-05', 26.45, 'FOOD'),
+(1, 'Pokemon', '2024-04-07', 16.21, 'GAMES');
