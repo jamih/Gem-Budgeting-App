@@ -18,6 +18,9 @@ public class ExpenseItem {
 
     @Column(name = "user_id")
     private Long user_id;
+
+    @Column(name = "name")
+    private String name;
     
     @Column(name = "date")
     @CreationTimestamp

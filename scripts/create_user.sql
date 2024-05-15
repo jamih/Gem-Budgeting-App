@@ -1,7 +1,7 @@
 -- Drop user first if they exist
-DROP USER if exists 'budgetuser'@'localhost' ;
+DROP USER if exists 'dataBudgetUser'@'localhost' ;
 
 -- Now create user with prop privileges
-CREATE USER 'budgetuser'@'localhost' IDENTIFIED BY 'budgetuser';
+CREATE USER 'dataBudgetUser'@'localhost' IDENTIFIED BY 'dataBudgetUser1';
 
-GRANT ALL PRIVILEGES ON * . * TO 'budgetuser'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO 'dataBudgetUser'@'localhost';
