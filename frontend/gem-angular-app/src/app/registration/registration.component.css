@@ -1,0 +1,32 @@
+body {
+    background-color: #d4fcea;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 400;
+text-align: center; 
+}
+
+h5 {
+    text-align: center;
+}
+
+
+
+.registration-card {
+    width: 660px;
+    margin-top: 30px;
+
+}
+
+.sign-up-button {
+    background-color: #03dac5;
+    border: 2px solid #03dac5;
+}
+
+.reg-input {
+    width: 230px;
+    float:left;
+    margin: 16px;
+}
