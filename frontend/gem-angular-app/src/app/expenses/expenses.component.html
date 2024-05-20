@@ -1,54 +1,71 @@
 <app-header></app-header>
 
 <div class="container mt-4">
-    <div class="d-flex" style="flex-wrap: wrap; justify-content: space-between;">
-        <h1>Latest Transactions</h1>
-        <div class="pt-2"><button type="button" class="btn btn-primary">Add Expense</button></div>
-    </div>
+  <div class="d-flex" style="flex-wrap: wrap; justify-content: space-between;">
+      <h1>Latest Transactions</h1>
+      <div class="pt-2"><button type="button" class="btn btn-primary" (click)="modalService.open('modal-1')">Add Expense</button></div>
+      <div style="display: none;">{{ newExpenseItem }}</div>
+  </div>
 
-    <table class="table table-hover table-bordered">
-    <thead>
-      <tr>
-        <th>Expense</th>
-        <th>Date of Purchase</th>
-        <th>Category</th>
-        <th>Amount</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-            <div style="width:45px; height:auto; display: inline-block">
-                <img src="assets/GemLogo.png" class="img-fluid">
-            </div>
-            Spotify
-        </td>
-        <td>April 1, 8:00 AM</td>
-        <td>Entertainment</td>
-        <td>-$10.99</td>
-      </tr>
-      <tr>
-        <td>
-            <div style="width:45px; height:auto; display: inline-block">
-                <img src="assets/GemLogo.png" class="img-fluid">
-            </div>
-            Tom Thumb
-        </td>
-        <td>April 4, 2:32 PM</td>
-        <td>Grocery</td>
-        <td>-$45.30</td>
-      </tr>
-      <tr>
-        <td>
-            <div style="width:45px; height:auto; display: inline-block">
-                <img src="assets/GemLogo.png" class="img-fluid">
-            </div>
-            PetSmart
-        </td>
-        <td>April 7, 10:23 AM</td>
-        <td>Pet</td>
-        <td>-$35.50</td>
-      </tr>
-    </tbody>
-  </table>
+  <jw-modal id="modal-1">
+    <div class="container">
+      <h1>Add Expense</h1>
+      <div class="grid text-center">
+        <p>Merchant: <input type="text" [(ngModel)]="newExpenseItem.name" /></p>
+        <p>Amount: <input type="text" [(ngModel)]="newExpenseItem.amount" /></p>
+        <p>Date of purchase: <input type="text" [(ngModel)]="newExpenseItem.dateCreated" /></p>
+        <p>Category: <input type="text" [(ngModel)]="newExpenseItem.category" /></p>
+      </div>
+    </div>
+    <div class="container d-flex" style="justify-content: end;">
+      <button class="btn btn-primary" (click)="modalService.close(); createNewExpense();">Add Expense</button>
+      <button class="btn btn-primary" (click)="modalService.close(); 
+          newExpenseItem.name = ''; newExpenseItem.amount = 0; newExpenseItem.dateCreated = null; newExpenseItem.category = ''">Cancel</button>
+    </div>
+  </jw-modal>
+
+  <table class="table table-hover table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>Expense</th>
+      <th>Date of Purchase</th>
+      <th>Category</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tempItem of expenseItems">
+      <td>
+          <div style="width:45px; height:auto; display: inline-block">
+              <img src="assets/GemLogo.png" class="img-fluid">
+          </div>
+          {{ tempItem.name }}
+      </td>
+      <td>{{ getFormattedDate(tempItem.dateCreated) }}</td>
+      <td>{{ getFormattedCategory(tempItem.category) }}</td>
+      <td>-{{ tempItem.amount | currency:'USD'}}</td>
+    </tr>
+  </tbody>
+</table>
 </div>
+
+<!-- <div>
+  <div>
+      <h1>Angular 14 - Modal Popup Example</h1>
+      <p>{{bodyText}}</p>
+      <button (click)="modalService.open('modal-1')">Open Modal 1</button>
+      <button (click)="modalService.open('modal-2')">Open Modal 2</button>
+  </div>
+
+  <jw-modal id="modal-1">
+    <h1>A custom modal popup</h1>
+    <p>Home page text: <input type="text" [(ngModel)]="bodyText" /></p>
+    <button (click)="modalService.close();">Close</button>
+  </jw-modal>
+  
+  <jw-modal id="modal-2">
+      <h1>A tall modal popup</h1>
+      <p style="padding-bottom: 1500px;">Close with the button below or by clicking the background.</p>
+      <button (click)="modalService.close();">Close</button>
+  </jw-modal>
+</div> -->

@@ -1,6 +1,12 @@
 export class ExpenseItem {
 
-    constructor(public name: string) {
-        //TODO: complete changes to setup
+    constructor(
+        public user_id: number,
+        public name: string,
+        public dateCreated: Date,
+        public amount: number,
+        public category: string
+    ) {
+
     }
 }
