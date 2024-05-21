@@ -5,7 +5,7 @@ body {
 h1 {
     font-size: 50px;
     font-weight: 400;
-text-align: center; 
+    text-align: center;
 }
 
 h5 {
@@ -32,7 +32,7 @@ h5 {
 
 .reg-input {
     width: 240px;
-    float:left;
+    float: left;
     display: inline-block;
     text-align: center;
     margin-left: 32px;
@@ -44,12 +44,10 @@ h5 {
 .state-select {
     width: 240px;
     height: 38px;
-    float:left;
-    display: inline-block;
+    float: left;
     text-align: center;
-    margin-left: 32px;
-    margin-right: 32px;
-    margin-top: 40px;
+    display: inline-block;
+    margin-right: 40px;
     margin-bottom: 16px;
     border-color: #dee2e6;
     border-radius: 6px;
