@@ -47,7 +47,7 @@ export class ExpensesComponent implements OnInit {
 
   createNewExpense() {
     
-    console.log(this.newExpenseItem);
+    // console.log(this.newExpenseItem);
     this.expenseItemService.createNewExpenseItem(this.newExpenseItem);
   }
 

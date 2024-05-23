@@ -19,9 +19,11 @@ export class ExpenseItemService {
     );
   }
 
-  createNewExpenseItem(item: ExpenseItem): boolean {
-    console.log("Created new Expense item from service class");
-    return true;
+  createNewExpenseItem(item: ExpenseItem): Observable<any> {
+    // console.log("Created new Expense item from service class");
+    let addUrl = this.baseUrl + '/item';
+
+    return this.httpClient.post<ExpenseItem>(addUrl, item);
   }
 }
 
