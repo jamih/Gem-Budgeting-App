@@ -8,4 +8,5 @@ import com.budget.springbootbudget.entity.ExpenseItem;
 @CrossOrigin("http://localhost:4200")
 public interface ExpenseItemRepository extends JpaRepository<ExpenseItem, Long> {
 
+    // utlize save() method to save new expenseItem
 }
