@@ -17,9 +17,8 @@
       </div>
     </div>
     <div class="container d-flex" style="justify-content: end;">
-      <button class="btn btn-primary" (click)="modalService.close(); createNewExpense();">Add Expense</button>
-      <button class="btn btn-primary" (click)="modalService.close(); 
-          newExpenseItem.name = ''; newExpenseItem.amount = 0; newExpenseItem.dateCreated = null; newExpenseItem.category = ''">Cancel</button>
+      <button class="btn btn-primary" style="margin-right: 1rem;" (click)="modalService.close(); createNewExpense();">Add Expense</button>
+      <button class="btn btn-primary" (click)="modalService.close(); resetForm();">Cancel</button>
     </div>
   </jw-modal>
 

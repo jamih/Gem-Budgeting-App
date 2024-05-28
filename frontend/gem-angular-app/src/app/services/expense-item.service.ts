@@ -10,6 +10,7 @@ import { map } from 'rxjs/operators';
 export class ExpenseItemService {
 
   private baseUrl = 'http://localhost:8080/api/expenseItems';
+  private addUrl = 'http://localhost:8080/api/expenseItems/addItem';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -20,10 +21,7 @@ export class ExpenseItemService {
   }
 
   createNewExpenseItem(item: ExpenseItem): Observable<any> {
-    // console.log("Created new Expense item from service class");
-    let addUrl = this.baseUrl + '/item';
-
-    return this.httpClient.post<ExpenseItem>(addUrl, item);
+    return this.httpClient.post<ExpenseItem>(this.addUrl, item);
   }
 }
 

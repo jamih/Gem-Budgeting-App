@@ -1,8 +1,6 @@
 package com.budget.springbootbudget.entity;
 
 import java.util.Date;
-
-import org.hibernate.annotations.CreationTimestamp;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -23,7 +21,6 @@ public class ExpenseItem {
     private String name;
     
     @Column(name = "date")
-    @CreationTimestamp
     private Date dateCreated;
 
     @Column(name = "amount")

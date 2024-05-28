@@ -30,7 +30,18 @@ export class ExpensesComponent implements OnInit {
 
   getFormattedDate(dateItem: Date) {
     const datepipe: DatePipe = new DatePipe('en-US');
-    let formattedDate: String = datepipe.transform(dateItem, 'MMM dd, YYYY hh:mm a');
+    // let formattedDate: String = datepipe.transform(dateItem, 'MMM dd, YYYY hh:mm a');
+
+    let formattedDate: String = datepipe.transform(dateItem, 'MMM dd, YYYY');
+
+    return formattedDate;
+  }
+
+  createInternalFormattedDate(dateItem: Date) {
+    let formattedDate: Date = new Date(dateItem);
+    // let time: any = new Date().toLocaleTimeString();
+    // formattedDate.setHours(time.split(':')[0]);
+    // formattedDate.setMinutes(time.split(':')[1]);
 
     return formattedDate;
   }
@@ -46,9 +57,34 @@ export class ExpensesComponent implements OnInit {
   }
 
   createNewExpense() {
-    
-    // console.log(this.newExpenseItem);
-    this.expenseItemService.createNewExpenseItem(this.newExpenseItem);
+    let item = this.newExpenseItem;
+    item.dateCreated = this.createInternalFormattedDate(item.dateCreated);
+
+    this.expenseItemService.createNewExpenseItem(item).subscribe(
+      {
+        next: response => {
+
+          console.log(response);
+          alert("Your expense has been added!");
+
+          // reset form and reload tabel to load new item
+          this.resetForm();
+          this.reloadCurrentPage();
+        },
+        error: err => {
+          alert(`There was an error: ${err.message}`);
+        }
+      }
+    )
   }
+
+  resetForm() {
+    this.newExpenseItem.name = ''; this.newExpenseItem.amount = 0; 
+    this.newExpenseItem.dateCreated = null; this.newExpenseItem.category = '';
+  }
+
+  reloadCurrentPage() {
+    window.location.reload();
+   }
 
 }
