@@ -30,6 +30,8 @@ export class ExpensesComponent implements OnInit {
 
   getFormattedDate(dateItem: Date) {
     const datepipe: DatePipe = new DatePipe('en-US');
+    
+    // to append time to displayed date
     // let formattedDate: String = datepipe.transform(dateItem, 'MMM dd, YYYY hh:mm a');
 
     let formattedDate: String = datepipe.transform(dateItem, 'MMM dd, YYYY');
@@ -39,6 +41,8 @@ export class ExpensesComponent implements OnInit {
 
   createInternalFormattedDate(dateItem: Date) {
     let formattedDate: Date = new Date(dateItem);
+
+    // To append time to creation if wanted
     // let time: any = new Date().toLocaleTimeString();
     // formattedDate.setHours(time.split(':')[0]);
     // formattedDate.setMinutes(time.split(':')[1]);
@@ -67,7 +71,7 @@ export class ExpensesComponent implements OnInit {
           console.log(response);
           alert("Your expense has been added!");
 
-          // reset form and reload tabel to load new item
+          // reset form and reload table to load new item
           this.resetForm();
           this.reloadCurrentPage();
         },
