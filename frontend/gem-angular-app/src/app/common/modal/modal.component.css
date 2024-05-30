@@ -1,0 +1,82 @@
+/* MODAL STYLES
+-------------------------------*/
+jw-modal {
+    /* modals are hidden by default */
+    display: none;
+
+    .jw-modal {
+        /* modal container fixed across whole screen */
+        position: fixed;
+        inset: 0;
+
+        /* z-index must be higher than everything else on the page */
+        z-index: 10000;
+        
+        /* semi-transparent black background exposed by padding */
+        background-color: rgba(0, 0, 0, .75);
+        padding-top: 16rem;
+        padding-bottom: 20rem;
+        padding-left: 24rem; 
+        padding-right: 24rem;
+
+        /* enables scrolling for tall modals */
+        overflow: auto;
+    }
+
+    .jw-modal-body {
+        padding: 20px;
+        background: #fff;
+    }
+}
+
+body.jw-modal-open {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}
+
+@keyframes enter-slide-down {
+    from {
+      transform: translate(-50%, -60%);
+    }
+    to {
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  @keyframes enter-scaling {
+    from {
+      transform: scale(0.3) translate(-50%, -50%);
+    }
+    to {
+      transform: scale(1) translate(-50%, -50%);
+    }
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes overlay-leave {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      z-index: 0;
+      position: static;
+    }
+  }
